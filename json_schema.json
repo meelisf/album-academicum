@@ -1,0 +1,141 @@
+{
+  "entry_number": null,
+  "entry_date": null,
+  "person": {
+    "name": {
+      "full": null,
+      "family_name": null,
+      "family_name_variants": [],
+      "first_name": null,
+      "first_name_variants": [],
+      "noble_title": null,
+      "noble_status": null
+    },
+    "origin": {
+      "city": null,
+      "region": null,
+      "notes": null
+    },
+    "birth": {
+      "date": null,
+      "place": null,
+      "notes": null
+    },
+    "death": {
+      "date": null,
+      "place": null,
+      "notes": null
+    },
+    "father": {
+      "name": null,
+      "title": null,
+      "occupation": [
+        {
+          "role": null,
+          "location": null,
+          "date": null,
+          "institution": null,
+          "notes": null
+        }
+      ],
+      "death": {
+        "date": null,
+        "notes": null
+      }
+    },
+    "relations": [
+      {
+        "type": null,
+        "reference": null,
+        "notes": null
+      }
+    ]
+  },
+  "studies": [
+    {
+      "institution": null,
+      "type": null,
+      "date": null,
+      "semester": null,
+      "arrival_date": null,
+      "end_date": null,
+      "location": null,
+      "degree": null,
+      "subject": null,
+      "notes": null
+    }
+  ],
+  "academia_gustaviana_activity": {
+    "academic_ceremonies": [
+      {
+        "type": null,
+        "date": null,
+        "notes": null
+      }
+    ],
+    "positions": [
+      {
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "semester": null,
+        "notes": null
+      }
+    ],
+    "stipends": [
+      {
+        "start_date": null,
+        "end_date": null,
+        "semester": null,
+        "notes": null
+      }
+    ],
+    "disputations": [
+      {
+        "date": null,
+        "praeses": null,
+        "role": null,
+        "pro_gradu": false,
+        "notes": null
+      }
+    ],
+    "orations": [
+      {
+        "date": null,
+        "topic": null,
+        "notes": null
+      }
+    ],
+    "gratulations": [
+      {
+        "date": null,
+        "recipient": {
+          "name": null,
+          "reference": null
+        },
+        "notes": null
+      }
+    ],
+    "departures": [
+      {
+        "date": null,
+        "semester": null,
+        "notes": null
+      }
+    ]
+  },
+  "later_career": [
+    {
+      "role": null,
+      "institution": null,
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "appointment_date": null,
+      "titles": [],
+      "notes": null
+    }
+  ],
+  "general_notes": null,
+  "raw_text": null
+}

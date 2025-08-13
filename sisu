@@ -1,0 +1,417 @@
+==> ./llm-json-tering.py <==
+import google.generativeai as genai
+import os
+import json
+import glob
+from dotenv import load_dotenv
+
+def create_prompt(record_text, lyhendid_text, json_format_description, few_shot_examples):
+    """
+    Loob Gemini jaoks prompti, mis sisaldab kogu vajalikku infot.
+    """
+    prompt = f"""
+    Oled abiline, kes teisendab ajaloolisi tekste struktureeritud JSON formaati.
+    
+    **Ülesanne:** Teisenda järgnev tekstikirje JSON formaati vastavalt allpool toodud kirjeldusele ja näidetele.
+
+    **Sisendteksti formaat:**
+    
+    Kirjed algavad alati reaga "Immatrikuleerimise kuupäev: ...".
+    Seejärel tuleb kirje number kujul "[NR]...".
+    Ülejäänud tekst sisaldab informatsiooni isiku, tema õpingute, tegevuse Academia Gustaviana's ja hilisema karjääri kohta.
+
+==> ./kaardi-joonistamine.py <==
+import json
+import pandas as pd
+import folium
+from folium.plugins import MarkerCluster
+
+# --- 1. Andmete laadimine ja ettevalmistamine ---
+
+def load_data_from_json(filepath):
+    """
+    Laeb andmed JSON-failist.
+    Sarnane R-i osa: Andmete lugemine andmebaasist või failist.
+    """
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        print(f"Edukalt laaditud {len(data)} kirjet failist {filepath}")
+        return data
+    except FileNotFoundError:
+        print(f"VIGA: Faili ei leitud asukohast: {filepath}")
+        return None
+
+==> ./json_schema.json <==
+{
+  "entry_number": null,
+  "entry_date": null,
+  "person": {
+    "name": {
+      "full": null,
+      "family_name": null,
+      "family_name_variants": [],
+      "first_name": null,
+      "first_name_variants": [],
+      "noble_title": null,
+      "noble_status": null
+    },
+    "origin": {
+      "city": null,
+      "region": null,
+      "notes": null
+    },
+    "birth": {
+      "date": null,
+
+==> ./Kirjete_grupeerimine_kuupäevade_järgi.py <==
+import os
+import re
+
+class TextToJsonTranslator:
+    def __init__(self, max_chunk_size: int = 2500):
+        self.max_chunk_size = max_chunk_size
+
+    def read_txt_file(self, filename: str) -> str:
+        with open(filename, 'r', encoding='utf-8') as file:
+            return file.read()
+
+    def split_text_into_entries(self, text: str) -> list:
+        """
+        Jagab teksti loogilisteks tükkideks:
+          - Esialgne aastarida (ainult 4-kohaline number) salvestatakse.
+          - Seejärel otsitakse "kuupäeva" ridu, mis võivad olla kas täielikud
+            (näiteks "20. April 1632") või puuduliku aasta andmetega (näiteks "21. April" või "24. A pril").
+          - Kui aasta puudub, lisatakse eelmine teadaolev aasta.
+          - Iga kuupäeva alusel jagatakse järgnevad tudengite kirjed (nummerdatud 1., 2., jne).
+        """
+
+==> ./kuude_kaupa.py <==
+import re
+import os
+
+def process_year_file(year_file, output_base_dir):
+    """Jagab aastafaili kirjed kuude kaupa failidesse.
+    Eeldab, et iga kuupäev (või kuu ja aasta) tähistab uue kirje algust.
+    """
+    month_files = {}
+    year = os.path.basename(year_file).split('.')[0]
+    output_dir = os.path.join(output_base_dir, year)
+    os.makedirs(output_dir, exist_ok=True)
+
+    with open(year_file, 'r', encoding='utf-8') as infile:
+        current_record = []
+        current_month = None
+
+        for line in infile:
+            line = line.strip()
+
+            # Regexid kuupäeva ja kuu-aasta jaoks
+
+==> ./puhastamine.py <==
+import os
+import re
+
+def merge_hyphenations(text):
+    """Liidab poolitatud sõnad."""
+
+    def replace_hyphenation(match):
+        # See funktsioon saab re.sub poolt leitud vaste
+        first_part = match.group(1)  # Sõnaosa koos sidekriipsuga
+        next_line_start = match.group(2) #järgmine rida
+        return first_part.replace("-", "") + next_line_start #eemaldab sidekriipsu
+
+    #  Otsib sõna, mis lõpeb sidekriipsuga, millele järgneb
+    #  reavahetus (võimalike tühikutega) ja väiketähega algav sõna.
+    pattern = r'(\w+-)\s*\r?\n\s*([a-zäöüõ][^\s]*)'
+    
+    # Kasutame re.sub koos asendusfunktsiooniga.
+    cleaned_text = re.sub(pattern, replace_hyphenation, text, flags=re.MULTILINE)
+    return cleaned_text
+
+
+==> ./tering_nimed.txt <==
+Abr. = Abraham(us)
+Achat. = Achatius
+Ad. = Adolphus (Adolf)
+Adr. = Adrian
+Aegid. = Aegidius
+Alb. = Albert(us)
+Alex. = Alexander
+Ambr. = Ambrosius
+Andr. = Andreas
+Ant. = Anton(ius)
+Arn. = Arnold(us)
+Aug. = Augustus
+Balth. = Balthasar
+Barth. = Bartholomaeus
+Bened. = Benedictus
+Benj. = Benjamin
+Bernh. = Bernhard(us)
+Berth. = Berthold
+Burch. = Burchard(us)
+Car. = Carolus
+
+==> ./eralid-kirjeteks.py <==
+import re
+import os
+from pathlib import Path
+
+def process_month_file(month_file, year):
+    """Loeb sisse ühe kuufaili, eraldab kirjed ja tagastab need listina."""
+    records = []
+    current_record = None
+    current_header = None
+    
+    with open(month_file, 'r', encoding='utf-8') as infile:
+        content = infile.read()
+        # Eemaldame liigsed tühikud
+        content = re.sub(r'\n\s*\n', '\n', content)
+        lines = content.split('\n')
+        
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+
+==> ./sisselugemine-mongo.R <==
+install.packages("mongolite")
+
+library(mongolite)
+
+
+connection <- mongo(collection = "tudengid",
+                    db = "album_academicum",
+                    url = "mongodb://localhost")
+
+andmed <- connection$find('{}')
+
+# Kõigepealt taastame originaalväärtused
+andmed$person$origin$standardized_region <- str_replace_all(
+  andmed$person$origin$standardized_region,
+  "Schleswig-Schleswig-Holstein-Schleswig-Holstein|Schleswig-Schleswig-Holstein",
+  "Schleswig-Holstein"
+)
+
+# Siis teeme õige asenduse ühe korraga
+schleswig_standariseerimine <- data.frame(
+
+==> ./failid <==
+album_academicum.tudengid.json
+eralid-kirjeteks.py
+failid
+few_shot_examples.json
+geonames-updater.py
+gratulatsioonide_heatmap_region_group_propensity_filtered.png
+json_schema.json
+kaardi-joonistamine.py
+kaart-mongo.R
+Kirjete_grupeerimine_kuupäevade_järgi.py
+Kirjete_jagamine_sadade_kaupa.py
+kuude_kaupa.py
+llm-json-tering.py
+numbrite-regex.py
+puhastamine.py
+regioonid.json
+Screenshot from 2025-08-01 23-38-11.png
+sisselugemine-mongo.R
+tering_lyhendid.txt
+tering_nimed.txt
+
+==> ./tering_lyhendid.txt <==
+a. d. = an der
+Adj. = Adjunkt
+Adv. = Advokat
+Ält. = Ältester
+AG = Academia Gustaviana
+AGC = Academia Gustavo-Carolina
+Alterm. = Altermann
+Aman. d. Bibl. = Amanuensis des Bibliothekars
+Ångerm. = Ångermanland
+a. o. = außerordentlich
+Art. = Artillerie
+Ass. = Assessor
+b. = bei(m)
+bacc. = baccalareus
+Bar. = Baron
+Bb. = Bibliotheksbenutzung
+bearb. = bearbeitet
+Bf. = Bischof
+Bgm. = Bürgermeister
+Bgr. = Bürger
+
+==> ./album_academicum.tudengid.json <==
+[{
+  "_id": {
+    "$oid": "67b733ac1c9050335c775b38"
+  },
+  "entry_number": 1378,
+  "entry_date": "1696-01-21",
+  "person": {
+    "name": {
+      "full": "Thumb v. Weingarten, Paulus Fridericus",
+      "family_name": "Thumb v. Weingarten",
+      "family_name_variants": [],
+      "first_name": "Paulus Fridericus",
+      "first_name_variants": [],
+      "noble_title": null,
+      "noble_status": "Nob."
+    },
+    "origin": {
+      "city": "Riga",
+      "region": "Liv.",
+      "notes": null,
+
+==> ./geonames-updater.py <==
+import json
+import os
+import glob
+import requests
+import time
+import logging
+from typing import Dict, Optional, Tuple
+
+# Seadista logimine
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='geonames_update.log',
+    filemode='a'
+)
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+logging.getLogger('').addHandler(console)
+
+# Geonames API konfiguratsioon
+
+==> ./võrgustikanalüüs.py <==
+import json
+import re
+from matplotlib.colors import LogNorm, Normalize
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np # Vajalik oodatavate väärtuste arvutamiseks
+from collections import Counter
+
+# Andmefaili asukoht
+FILE_PATH = '/home/mf/LLM/aa-seoste-võrgustik/data/album_academicum.json'
+
+def load_data(filepath):
+    """Laeb andmed JSON-failist ja tagastab need Pythoni listina."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        print(f"Edukalt laaditud {len(data)} sissekannet failist {filepath}")
+        return data
+    except FileNotFoundError:
+
+==> ./Kirjete_jagamine_sadade_kaupa.py <==
+import re
+
+def split_file_by_hundreds(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Leiame "sajaste" alguspunktid (1., 101., 201. jne)
+    hundreds_positions = []
+    
+    # Alustame esimesest kirjest
+    pattern = r"^1\."
+    match = re.search(pattern, content, re.MULTILINE)
+    if match:
+        hundreds_positions.append(match.start())
+    
+    # Leiame ülejäänud "sajased" alguspunktid
+    for i in range(101, 2000, 100):  # Eeldame, et kirjeid pole rohkem kui 2000
+        pattern = f"^{i}\\."
+        match = re.search(pattern, content, re.MULTILINE)
+        if match:
+
+==> ./kaart-mongo.R <==
+# Installime vajalikud paketid, kui need pole veel installitud
+if (!require("leaflet")) install.packages("leaflet")
+if (!require("dplyr")) install.packages("dplyr")
+
+# Laadime paketid
+library(leaflet)
+library(dplyr)
+
+# Loome andmeraami koordinaatidega
+kaardi_andmed <- data.frame(
+  regioon = unlist(andmed$person$origin$standardized_region),
+  id = unlist(andmed$person$origin$geonames_id),
+  lat = unlist(andmed$person$origin$coordinates$lat),
+  lng = unlist(andmed$person$origin$coordinates$lng),
+  stringsAsFactors = FALSE
+)
+
+# Eemaldame puuduvad koordinaadid
+kaardi_andmed <- kaardi_andmed %>% 
+  filter(!is.na(lat) & !is.na(lng))
+
+==> ./regioonid.json <==
+{
+    "regions": {
+        "Livl.": {
+            "full_name": "Livland",
+            "modern_countries": [
+                "Estonia",
+                "Latvia"
+            ],
+            "cities": [
+                "Riga",
+                "Dorpat",
+                "Pernau",
+                "Wenden"
+            ],
+            "identifiers": [
+                "Livonus",
+                "Liv.",
+                "Sveo-Livonus"
+            ]
+        },
+
+==> ./few_shot_examples.json <==
+[
+    {
+        "Tekst": "Immatrikuleerimise kuupäev: 20. April 1632\n[NR]1. Baaz(ius) (Baacius, Basius, Bazius), Benedictus (Bengt), Jönköping (Smal.),\n*1612, †1650. V.: Joh. B., P. in Jönköping 1624, sp. Bf. v. Växjö, †1649. Stud.\nUniv. Rostock (imm. 12. 1627), Uppsala (imm. 4. 1628; Or. 7. 6. 1629), Gymn.\nDorpat 1631 (erw. 27. 8)-32. AG: Depositor 21. 4. 1632-28. 5. 1633; Pedell I\nHj. 1633; Konv. 1. 9. 1631-1.5. 1633; Disp. 15. 9. 1632 (Jacob Skytte), 1632\n(Oldenburg), 29. 6. 1633 (als Präses), PG 22. 6. 1633 (Savonius); G. 3. 10. 1632 -\nM. Anethulander, 28. 3. 1633 → Petrus Andreae, 4. 5. 1633 → N. Prytz, 22. 6.\n1633 → J. Lannerus. Informator v. Karl Gustav (wurde v. Johan Skytte und\nK. Gylldenhielm rekomm.) 1635, Auskultant d. Svea-Hofgerichts 1635, Sekr. 1642,\ngead. Ekehielm 1647, Unterstatthalter v. Stockholm 1648.",
+        "JSON": {
+            "entry_number": 1,
+            "entry_date": "1632-04-20",
+            "person": {
+                "name": {
+                    "full": "Baaz(ius) (Baacius, Basius, Bazius), Benedictus (Bengt)",
+                    "family_name": "Baaz",
+                    "family_name_variants": [
+                        "Baacius",
+                        "Basius",
+                        "Bazius"
+                    ],
+                    "first_name": "Benedictus",
+                    "first_name_variants": [
+                        "Bengt"
+                    ],
+                    "noble_title": null,
+
+==> ./numbrite-regex.py <==
+import os
+import re
+
+def find_and_mark_entries(filename="data/tering_koondfail.txt"):
+    print("Alustan faili lugemist...")
+    with open(filename, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # List kirjete salvestamiseks koos positsioonidega
+    entries = []
+    problems = []
+    
+    # Otsime kõik read, mis algavad numbriga
+    # Kasutame otsese otsingu asemel regex otsingut
+    current_position = 0
+    expected_number = 1
+    
+    while current_position < len(content):
+        # Otsi järgmist rida, mis võiks olla kirje
+        pattern = fr'\n{expected_number}\. [A-ZÄÖÜ]'

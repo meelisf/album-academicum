@@ -1,0 +1,439 @@
+{
+    "regions": {
+        "Livl.": {
+            "full_name": "Livland",
+            "modern_countries": [
+                "Estonia",
+                "Latvia"
+            ],
+            "cities": [
+                "Riga",
+                "Dorpat",
+                "Pernau",
+                "Wenden"
+            ],
+            "identifiers": [
+                "Livonus",
+                "Liv.",
+                "Sveo-Livonus"
+            ]
+        },
+        "Estl.": {
+            "full_name": "Estland",
+            "modern_countries": [
+                "Estonia"
+            ],
+            "cities": [
+                "Reval",
+                "Narva"
+            ],
+            "identifiers": [
+                "Esthonus",
+                "Aestonus"
+            ]
+        },
+        "Ösel": {
+            "full_name": "Ösel",
+            "modern_countries": [
+                "Estonia"
+            ],
+            "cities": [
+                "Arensburg"
+            ],
+            "identifiers": [
+                "Oesel",
+                "Osel"
+            ]
+        },
+        "Kurl.": {
+            "full_name": "Kurland",
+            "modern_countries": [
+                "Latvia"
+            ],
+            "cities": [
+                "Mitau",
+                "Libau",
+                "Goldingen",
+                "Windau"
+            ],
+            "identifiers": ["Curlandus"]
+        },
+        "Ingerm.": {
+            "full_name": "Ingermanland",
+            "modern_countries": [
+                "Russia"
+            ],
+            "cities": [
+                "Nyen",
+                "Narva"
+            ],
+            "identifiers": ["Suecus/Ingerm."]
+        },
+        "Finnl.": {
+            "full_name": "Finnland",
+            "modern_countries": [
+                "Finland"
+            ],
+            "cities": [],
+            "identifiers": [
+                "Finno",
+                "Finlandus",
+                "Finn",
+                "Fin",
+                "Finno."
+            ]
+        },
+        "Pomm.": {
+            "full_name": "Pommern",
+            "modern_countries": [
+                "Germany",
+                "Poland"
+            ],
+            "cities": [
+                "Stettin",
+                "Stralsund",
+                "Greifswald"
+            ],
+            "identifiers": ["Pomeranus", "Pomm"]
+        },
+        "Westpr.": {
+            "full_name": "Westpreussen",
+            "modern_countries": [
+                "Poland"
+            ],
+            "cities": [
+                "Danzig",
+                "Elbing",
+                "Thorn"
+            ],
+            "identifiers": null
+        },
+        "Ostpr.": {
+            "full_name": "Ostpreussen",
+            "modern_countries": [
+                "Russia",
+                "Poland"
+            ],
+            "cities": [
+                "Königsberg",
+                "Memel"
+            ],
+            "identifiers": null
+        },
+        "Brand.": {
+            "full_name": "Brandenburg",
+            "modern_countries": [
+                "Germany"
+            ],
+            "cities": [
+                "Berlin",
+                "Frankfurt/Oder"
+            ],
+            "identifiers": null
+        },
+        "Siebenbürgen": {
+            "full_name": "Siebenbürgen",
+            "modern_countries": ["Romania"],
+            "cities": [],
+            "identifiers": ["Transylvania"]
+        },
+        "Schw.": {
+            "full_name": "Schweden",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "regions": [
+                "Uppl.",
+                "Söderm.",
+                "Västergötl.",
+                "Östergötl.",
+                "Smål.",
+                "Värml.",
+                "Västmanl.",
+                "Dalsl.",
+                "Hälsingl.",
+                "Jämtl.",
+                "Ångerm.",
+                "Gästrikl.",
+                "Gotl.",
+                "Norrbotten"
+            ],
+            "identifiers": [
+                "Svecus",
+                "Suecus"
+            ]
+        },
+        "Närke": {
+            "full_name": "Närke",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Uppl.": {
+            "full_name": "Uppland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Österbotten": {
+            "full_name": "Österbotten",
+            "modern_countries": [
+                "Finland"
+            ],
+            "cities": [],
+            "identifiers": [
+                "Ostrobothnia",
+                "Suecus/Bothniensis",
+                "Bothniensis"
+            ]
+        },
+        "Dalarna": {
+            "full_name": "Dalarna",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Söderm.": {
+            "full_name": "Södermanland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": ["Söderm./Ingerm."]
+        },
+        "Västergötl.": {
+            "full_name": "Västergötland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": "Regnimontanus"
+        },
+        "Östergötl.": {
+            "full_name": "Östergötland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Smål.": {
+            "full_name": "Småland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": ["Smal.", "Smål", "Smál."]
+        },
+        "Värml.": {
+            "full_name": "Värmland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": "Peninsulanus"
+        },
+        "Västmanl.": {
+            "full_name": "Västmanland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": "Sarmontanus"
+        },
+        "Dalsl.": {
+            "full_name": "Dalsland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Hälsingl.": {
+            "full_name": "Hälsingland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Jämtl.": {
+            "full_name": "Jämtland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Ångerm.": {
+            "full_name": "Ångermanland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Gästrikl.": {
+            "full_name": "Gästrikland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Gotl.": {
+            "full_name": "Gotland",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Norrbotten": {
+            "full_name": "Norrbotten",
+            "modern_countries": [
+                "Sweden"
+            ],
+            "cities": [],
+            "identifiers": "Ramomontanus"
+        },
+        "Kar.": {
+            "full_name": "Karelien",
+            "modern_countries": [
+                "Russia",
+                "Finland"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Nyl.": {
+            "full_name": "Nyland",
+            "modern_countries": [
+                "Finland"
+            ],
+            "cities": [],
+            "identifiers": [
+                "Nyl. (Finnl.)"
+            ]
+        },
+        "Meckl.": {
+            "full_name": "Mecklenburg",
+            "modern_countries": [
+                "Germany"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Sa.": {
+            "full_name": "Sachsen",
+            "modern_countries": [
+                "Germany"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Thür.": {
+            "full_name": "Thüringen",
+            "modern_countries": [
+                "Germany"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Vogtl.": {
+            "full_name": "Vogtland",
+            "modern_countries": [
+                "Germany"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Westph.": {
+            "full_name": "Westphalen",
+            "modern_countries": [
+                "Germany"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Rußl.": {
+            "full_name": "Rußland",
+            "modern_countries": [
+                "Russia"
+            ],
+            "cities": [],
+            "identifiers": null
+        },
+        "Pr.": {
+            "full_name": "Preussen",
+            "modern_countries": [
+                "Germany",
+                "Poland",
+                "Russia"
+            ],
+            "cities": [],
+            "identifiers": null
+        }
+    },
+    "cities": {
+        "Riga": "Livl.",
+        "Dorpat": "Livl.",
+        "Pernau": "Livl.",
+        "Wenden": "Livl.",
+        "Reval": "Estl.",
+        "Arensburg": "Ösel",
+        "Narva": "Estl.",
+        "Mitau": "Kurl.",
+        "Libau": "Kurl.",
+        "Goldingen": "Kurl.",
+        "Windau": "Kurl.",
+        "Königsberg": "Ostpr.",
+        "Memel": "Ostpr.",
+        "Danzig": "Westpr.",
+        "Elbing": "Westpr.",
+        "Thorn": "Westpr.",
+        "Stettin": "Pomm.",
+        "Stralsund": "Pomm.",
+        "Greifswald": "Pomm.",
+        "Berlin": "Brand.",
+        "Frankfurt/Oder": "Brand.",
+        "Leipzig": "Sachsen",
+        "Åbo": "Finnl.",
+        "Abo": "Finnl."
+    },
+    "swedish_regions": {
+        "Uppl.": "Uppland",
+        "Söderm.": "Södermanland",
+        "Västergötl.": "Västergötland",
+        "Östergötl.": "Östergötland",
+        "Smål.": "Småland",
+        "Värml.": "Värmland",
+        "Västmanl.": "Västmanland",
+        "Dalsl.": "Dalsland",
+        "Hälsingl.": "Hälsingland",
+        "Jämtl.": "Jämtland",
+        "Ångerm.": "Ångermanland",
+        "Gästrikl.": "Gästrikland",
+        "Gotl.": "Gotland",
+        "Norrbotten": "Norrbotten"
+    },
+    "identifiers": {
+        "Germanus": {
+            "possible_regions": [
+                "Meckl.",
+                "Sa.",
+                "Thür.",
+                "Vogtl.",
+                "Westph.",
+                "Brand.",
+                "Pomm."
+            ]
+        }
+    }
+}

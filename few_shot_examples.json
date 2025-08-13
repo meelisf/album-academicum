@@ -1,0 +1,615 @@
+[
+    {
+        "Tekst": "Immatrikuleerimise kuupäev: 20. April 1632\n[NR]1. Baaz(ius) (Baacius, Basius, Bazius), Benedictus (Bengt), Jönköping (Smal.),\n*1612, †1650. V.: Joh. B., P. in Jönköping 1624, sp. Bf. v. Växjö, †1649. Stud.\nUniv. Rostock (imm. 12. 1627), Uppsala (imm. 4. 1628; Or. 7. 6. 1629), Gymn.\nDorpat 1631 (erw. 27. 8)-32. AG: Depositor 21. 4. 1632-28. 5. 1633; Pedell I\nHj. 1633; Konv. 1. 9. 1631-1.5. 1633; Disp. 15. 9. 1632 (Jacob Skytte), 1632\n(Oldenburg), 29. 6. 1633 (als Präses), PG 22. 6. 1633 (Savonius); G. 3. 10. 1632 -\nM. Anethulander, 28. 3. 1633 → Petrus Andreae, 4. 5. 1633 → N. Prytz, 22. 6.\n1633 → J. Lannerus. Informator v. Karl Gustav (wurde v. Johan Skytte und\nK. Gylldenhielm rekomm.) 1635, Auskultant d. Svea-Hofgerichts 1635, Sekr. 1642,\ngead. Ekehielm 1647, Unterstatthalter v. Stockholm 1648.",
+        "JSON": {
+            "entry_number": 1,
+            "entry_date": "1632-04-20",
+            "person": {
+                "name": {
+                    "full": "Baaz(ius) (Baacius, Basius, Bazius), Benedictus (Bengt)",
+                    "family_name": "Baaz",
+                    "family_name_variants": [
+                        "Baacius",
+                        "Basius",
+                        "Bazius"
+                    ],
+                    "first_name": "Benedictus",
+                    "first_name_variants": [
+                        "Bengt"
+                    ],
+                    "noble_title": null,
+                    "noble_status": null
+                },
+                "origin": {
+                    "city": "Jönköping",
+                    "region": "Smal.",
+                    "notes": null
+                },
+                "birth": {
+                    "date": "1612",
+                    "place": null,
+                    "notes": null
+                },
+                "death": {
+                    "date": "1650",
+                    "place": null,
+                    "notes": null
+                },
+                "father": {
+                    "name": "Joh. B.",
+                    "title": null,
+                    "occupation": [
+                        {
+                            "role": "P.",
+                            "location": "Jönköping",
+                            "date": "1624",
+                            "institution": null,
+                            "notes": null
+                        },
+                        {
+                            "role": "Bf.",
+                            "location": "Växjö",
+                            "date": null,
+                            "institution": null,
+                            "notes": "sp."
+                        }
+                    ],
+                    "death": {
+                        "date": "1649",
+                        "notes": null
+                    }
+                },
+                "relations": []
+            },
+            "studies": [
+                {
+                    "institution": "Univ. Rostock",
+                    "type": "imm.",
+                    "date": "1627-12",
+                    "semester": null,
+                    "arrival_date": null,
+                    "end_date": null,
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": null
+                },
+                {
+                    "institution": "Uppsala",
+                    "type": "imm.",
+                    "date": "1628-04",
+                    "semester": null,
+                    "arrival_date": null,
+                    "end_date": null,
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": null
+                },
+                {
+                    "institution": "Uppsala",
+                    "type": "Or.",
+                    "date": "1629-06-07",
+                    "semester": null,
+                    "arrival_date": null,
+                    "end_date": null,
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": null
+                },
+                {
+                    "institution": "Gymn. Dorpat",
+                    "type": null,
+                    "date": "1631",
+                    "semester": null,
+                    "arrival_date": null,
+                    "end_date": "1632",
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": "erw. 27. 8"
+                }
+            ],
+            "academia_gustaviana_activity": {
+                "academic_ceremonies": [],
+                "positions": [
+                    {
+                        "role": "Depositor",
+                        "start_date": "1632-04-21",
+                        "end_date": "1633-05-28",
+                        "semester": null,
+                        "notes": null
+                    },
+                    {
+                        "role": "Pedell",
+                        "start_date": "1633",
+                        "end_date": null,
+                        "semester": "I Hj.",
+                        "notes": null
+                    },
+                    {
+                        "role": "Konv.",
+                        "start_date": "1631-09-01",
+                        "end_date": "1633-05-01",
+                        "semester": null,
+                        "notes": null
+                    }
+                ],
+                "stipends": [],
+                "disputations": [
+                    {
+                        "date": "1632-09-15",
+                        "praeses": "Jacob Skytte",
+                        "role": "respondent",
+                        "pro_gradu": false,
+                        "notes": null
+                    },
+                    {
+                        "date": "1632",
+                        "praeses": "Oldenburg",
+                        "role": "respondent",
+                        "pro_gradu": false,
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-06-29",
+                        "praeses": null,
+                        "role": "praeses",
+                        "pro_gradu": false,
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-06-22",
+                        "praeses": "Savonius",
+                        "role": "respondent",
+                        "pro_gradu": true,
+                        "notes": null
+                    }
+                ],
+                "orations": [],
+                "gratulations": [
+                    {
+                        "date": "1632-10-03",
+                        "recipient": {
+                            "name": "M. Anethulander",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-03-28",
+                        "recipient": {
+                            "name": "Petrus Andreae",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-05-04",
+                        "recipient": {
+                            "name": "N. Prytz",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-06-22",
+                        "recipient": {
+                            "name": "J. Lannerus",
+                            "reference": null
+                        },
+                        "notes": null
+                    }
+                ],
+                "departures": []
+            },
+            "later_career": [
+                {
+                    "role": "Informator",
+                    "institution": null,
+                    "location": null,
+                    "start_date": "1635",
+                    "end_date": null,
+                    "appointment_date": null,
+                    "titles": [],
+                    "notes": "v. Karl Gustav (wurde v. Johan Skytte und\nK. Gylldenhielm rekomm.)"
+                },
+                {
+                    "role": "Auskultant",
+                    "institution": "Svea-Hofgericht",
+                    "location": null,
+                    "start_date": "1635",
+                    "end_date": null,
+                    "appointment_date": null,
+                    "titles": [],
+                    "notes": "d."
+                },
+                {
+                    "role": "Sekr.",
+                    "institution": "Svea-Hofgericht",
+                    "location": null,
+                    "start_date": "1642",
+                    "end_date": null,
+                    "appointment_date": null,
+                    "titles": [],
+                    "notes": null
+                },
+                {
+                    "role": null,
+                    "institution": null,
+                    "location": null,
+                    "start_date": "1647",
+                    "end_date": null,
+                    "appointment_date": null,
+                    "titles": [
+                        "Ekehielm"
+                    ],
+                    "notes": "gead."
+                },
+                {
+                    "role": "Unterstatthalter",
+                    "institution": null,
+                    "location": "Stockholm",
+                    "start_date": "1648",
+                    "end_date": null,
+                    "appointment_date": null,
+                    "titles": [],
+                    "notes": "v."
+                }
+            ],
+            "general_notes": null,
+            "raw_text": "Immatrikuleerimise kuupäev: 20. April 1632\n[NR]1. Baaz(ius) (Baacius, Basius, Bazius), Benedictus (Bengt), Jönköping (Smal.),\n*1612, †1650. V.: Joh. B., P. in Jönköping 1624, sp. Bf. v. Växjö, †1649. Stud.\nUniv. Rostock (imm. 12. 1627), Uppsala (imm. 4. 1628; Or. 7. 6. 1629), Gymn.\nDorpat 1631 (erw. 27. 8)-32. AG: Depositor 21. 4. 1632-28. 5. 1633; Pedell I\nHj. 1633; Konv. 1. 9. 1631-1.5. 1633; Disp. 15. 9. 1632 (Jacob Skytte), 1632\n(Oldenburg), 29. 6. 1633 (als Präses), PG 22. 6. 1633 (Savonius); G. 3. 10. 1632 -\nM. Anethulander, 28. 3. 1633 → Petrus Andreae, 4. 5. 1633 → N. Prytz, 22. 6.\n1633 → J. Lannerus. Informator v. Karl Gustav (wurde v. Johan Skytte und\nK. Gylldenhielm rekomm.) 1635, Auskultant d. Svea-Hofgerichts 1635, Sekr. 1642,\ngead. Ekehielm 1647, Unterstatthalter v. Stockholm 1648."
+        }
+    },
+    {
+        "Tekst": "Immatrikuleerimise kuupäev: 21. April 1632\n[NR]7. Zethraeus, Georgius, Stora Skedvi (Dalarna), auch Västerås (Västmanl.). V.:\nMart. Stud. Gymn. Västerås, Dorpat 1631 (angekommen 1631). AG: Konv. 1632-\n33; Disp. 1. 12. 1632 (Savonius); G. 4. 3. 1633 → Petrus Andreae; verreist\n10. 8. 1633.",
+        "JSON": {
+            "entry_number": 7,
+            "entry_date": "1632-04-21",
+            "person": {
+                "name": {
+                    "full": "Zethraeus, Georgius",
+                    "family_name": "Zethraeus",
+                    "family_name_variants": [],
+                    "first_name": "Georgius",
+                    "first_name_variants": [],
+                    "noble_title": null,
+                    "noble_status": null
+                },
+                "origin": {
+                    "city": "Stora Skedvi",
+                    "region": "Dalarna",
+                    "notes": "auch Västerås (Västmanl.)"
+                },
+                "birth": {
+                    "date": null,
+                    "place": null,
+                    "notes": null
+                },
+                "death": {
+                    "date": null,
+                    "place": null,
+                    "notes": null
+                },
+                "father": {
+                    "name": "Mart.",
+                    "title": null,
+                    "occupation": [],
+                    "death": {
+                        "date": null,
+                        "notes": null
+                    }
+                },
+                "relations": []
+            },
+            "studies": [
+                {
+                    "institution": "Gymn. Västerås",
+                    "type": "Stud.",
+                    "date": null,
+                    "semester": null,
+                    "arrival_date": null,
+                    "end_date": null,
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": null
+                },
+                {
+                    "institution": "Gymn. Dorpat",
+                    "type": null,
+                    "date": "1631",
+                    "semester": null,
+                    "arrival_date": "1631",
+                    "end_date": null,
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": "angekommen 1631"
+                }
+            ],
+            "academia_gustaviana_activity": {
+                "academic_ceremonies": [],
+                "positions": [
+                    {
+                        "role": "Konv.",
+                        "start_date": "1632",
+                        "end_date": "1633",
+                        "semester": null,
+                        "notes": null
+                    }
+                ],
+                "stipends": [],
+                "disputations": [
+                    {
+                        "date": "1632-12-01",
+                        "praeses": "Savonius",
+                        "role": "respondent",
+                        "pro_gradu": false,
+                        "notes": null
+                    }
+                ],
+                "orations": [],
+                "gratulations": [
+                    {
+                        "date": "1633-03-04",
+                        "recipient": {
+                            "name": "Petrus Andreae",
+                            "reference": null
+                        },
+                        "notes": null
+                    }
+                ],
+                "departures": [
+                    {
+                        "date": "1633-08-10",
+                        "semester": null,
+                        "notes": "verreist"
+                    }
+                ]
+            },
+            "later_career": [],
+            "general_notes": null,
+            "raw_text": "Immatrikuleerimise kuupäev: 21. April 1632\n[NR]7. Zethraeus, Georgius, Stora Skedvi (Dalarna), auch Västerås (Västmanl.). V.:\nMart. Stud. Gymn. Västerås, Dorpat 1631 (angekommen 1631). AG: Konv. 1632-\n33; Disp. 1. 12. 1632 (Savonius); G. 4. 3. 1633 → Petrus Andreae; verreist\n10. 8. 1633."
+        }
+    },
+    {
+        "Tekst": "Immatrikuleerimise kuupäev: 21. April 1632\n[NR]2. Petrus Andreae. Arboga (Västmanl.). Stud. in Västerås, imm. Univ. Uppsala\n10. 1624. AG: Konv. 12. 8. 1632-7. 12. 1635; Disp. PG 22. 2. 1633 (Savonius);\nOr. 28. 3. 1633, 17. 2. 1638; G. 16. 10. 1632 → N. Aritander, 4. 5. 1633 →\nN. Prytz, 29. 6. 1633 → E. Bergius/B. Baazius, 16. 8. 1633 → Nicolaus Olai, 14. 9.\n1633 → P. Holmerus, 18. 1. 1634 → Sveno Bernhardi 12. 1634 → B. Brusaeus,\n12. 1634 → Nicolaus Olai, 17. 6. 1635 → A. Palma, 25. 2. 1636 → N. Aritander,\n2. 9. 1636 → N. Prytz, 28. 10. 1636 → A. Caustadius, 5. 7. 1637 → J. Rising,\n7. 1637 → A. Caustadius, 6. 4. 1638 → E. Löfvingius, 12. 6. 1637 → Salomon\nMatthiae (zur Hochzeit).",
+        "JSON": {
+            "entry_number": 2,
+            "entry_date": "1632-04-21",
+            "person": {
+                "name": {
+                    "full": "Petrus Andreae",
+                    "family_name": null,
+                    "family_name_variants": [],
+                    "first_name": "Petrus",
+                    "first_name_variants": [],
+                    "noble_title": null,
+                    "noble_status": null
+                },
+                "origin": {
+                    "city": "Arboga",
+                    "region": "Västmanl.",
+                    "notes": null
+                },
+                "birth": {
+                    "date": null,
+                    "place": null,
+                    "notes": null
+                },
+                "death": {
+                    "date": null,
+                    "place": null,
+                    "notes": null
+                },
+                "father": {
+                    "name": null,
+                    "title": null,
+                    "occupation": [],
+                    "death": {
+                        "date": null,
+                        "notes": null
+                    }
+                },
+                "relations": []
+            },
+            "studies": [
+                {
+                    "institution": "Västerås",
+                    "type": "Stud.",
+                    "date": null,
+                    "semester": null,
+                    "arrival_date": null,
+                    "end_date": null,
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": "in"
+                },
+                {
+                    "institution": "Univ. Uppsala",
+                    "type": "imm.",
+                    "date": "1624-10",
+                    "semester": null,
+                    "arrival_date": null,
+                    "end_date": null,
+                    "location": null,
+                    "degree": null,
+                    "subject": null,
+                    "notes": null
+                }
+            ],
+            "academia_gustaviana_activity": {
+                "academic_ceremonies": [],
+                "positions": [
+                    {
+                        "role": "Konv.",
+                        "start_date": "1632-08-12",
+                        "end_date": "1635-12-07",
+                        "semester": null,
+                        "notes": null
+                    }
+                ],
+                "stipends": [],
+                "disputations": [
+                    {
+                        "date": "1633-02-22",
+                        "praeses": "Savonius",
+                        "role": "respondent",
+                        "pro_gradu": true,
+                        "notes": null
+                    }
+                ],
+                "orations": [
+                    {
+                        "date": "1633-03-28",
+                        "topic": null,
+                        "notes": null
+                    },
+                    {
+                        "date": "1638-02-17",
+                        "topic": null,
+                        "notes": null
+                    }
+                ],
+                "gratulations": [
+                    {
+                        "date": "1632-10-16",
+                        "recipient": {
+                            "name": "N. Aritander",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-05-04",
+                        "recipient": {
+                            "name": "N. Prytz",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-06-29",
+                        "recipient": {
+                            "name": "E. Bergius/B. Baazius",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-08-16",
+                        "recipient": {
+                            "name": "Nicolaus Olai",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1633-09-14",
+                        "recipient": {
+                            "name": "P. Holmerus",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1634-01-18",
+                        "recipient": {
+                            "name": "Sveno Bernhardi",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1634-12",
+                        "recipient": {
+                            "name": "B. Brusaeus",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1634-12",
+                        "recipient": {
+                            "name": "Nicolaus Olai",
+                            "reference": null
+                          },
+                        "notes": null
+                    },
+                    {
+                        "date": "1635-06-17",
+                        "recipient": {
+                          "name": "A. Palma",
+                          "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1636-02-25",
+                        "recipient": {
+                          "name": "N. Aritander",
+                          "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1636-09-02",
+                        "recipient": {
+                          "name": "N. Prytz",
+                          "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1636-10-28",
+                        "recipient": {
+                          "name": "A. Caustadius",
+                          "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1637-07-05",
+                        "recipient": {
+                          "name": "J. Rising",
+                          "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                        "date": "1637-07",
+                        "recipient": {
+                            "name": "A. Caustadius",
+                            "reference": null
+                        },
+                        "notes": null
+                    },
+                    {
+                      "date": "1638-04-06",
+                      "recipient":{
+                        "name": "E. Löfvingius",
+                        "reference": null
+                      },
+                      "notes": null
+                    },
+                    {
+                      "date": "1637-06-12",
+                      "recipient": {
+                        "name": "Salomon Matthiae",
+                        "reference": null
+                      },
+                      "notes": "zur Hochzeit"
+                    }
+
+                ],
+                "departures": []
+            },
+            "later_career": [],
+            "general_notes": null,
+            "raw_text": "Immatrikuleerimise kuupäev: 21. April 1632\n[NR]2. Petrus Andreae. Arboga (Västmanl.). Stud. in Västerås, imm. Univ. Uppsala\n10. 1624. AG: Konv. 12. 8. 1632-7. 12. 1635; Disp. PG 22. 2. 1633 (Savonius);\nOr. 28. 3. 1633, 17. 2. 1638; G. 16. 10. 1632 → N. Aritander, 4. 5. 1633 →\nN. Prytz, 29. 6. 1633 → E. Bergius/B. Baazius, 16. 8. 1633 → Nicolaus Olai, 14. 9.\n1633 → P. Holmerus, 18. 1. 1634 → Sveno Bernhardi 12. 1634 → B. Brusaeus,\n12. 1634 → Nicolaus Olai, 17. 6. 1635 → A. Palma, 25. 2. 1636 → N. Aritander,\n2. 9. 1636 → N. Prytz, 28. 10. 1636 → A. Caustadius, 5. 7. 1637 → J. Rising,\n7. 1637 → A. Caustadius, 6. 4. 1638 → E. Löfvingius, 12. 6. 1637 → Salomon\nMatthiae (zur Hochzeit)."
+        }
+    }
+]

@@ -8,7 +8,7 @@ import numpy as np # Vajalik oodatavate väärtuste arvutamiseks
 from collections import Counter
 
 # Andmefaili asukoht
-FILE_PATH = '/home/mf/LLM/aa-seoste-võrgustik/data/album_academicum.json'
+FILE_PATH = '/home/mf/LLM/album-academicum/artikkel/album_academicum.tudengid.json'
 
 def load_data(filepath):
     """Laeb andmed JSON-failist ja tagastab need Pythoni listina."""
@@ -129,27 +129,31 @@ def create_heatmap(crosstab_data, title, output_filename, log_scale=False, is_pr
     
     # Kalduvusmaatriksi jaoks kasutame teistsugust värviskaalat
     if is_propensity:
-        cmap = "coolwarm" # Sinine (alla ootuste) -> valge (oodatud) -> punane (üle ootuste)
-        center = 1.0 # Värviskaala kese on 1.0
+        # Kasutame mustvalget värviskaalat vastavalt soovile.
+        cmap = "Greys"
         
         # Määrame skaala piirid, et üksikud ekstreemsed väärtused ei rikuks pilti
         # Kõik alla 0.2 on sügavsinine, kõik üle 5 on sügavpunane.
         norm = Normalize(vmin=0, vmax=max(5, crosstab_data.max().max())) 
         
         # Kalduvusmaatriksil kuvame väärtused kahe komakohaga
-        heatmap_args = {"annot": True, "fmt": ".2f", "cmap": cmap, "center": center, "norm": norm}
+        # Eemaldatud 'center', kuna 'Greys' ei ole lahknev (diverging) värviskaala.
+        heatmap_args = {"annot": True, "fmt": ".2f", "cmap": cmap, "norm": norm}
         print(f"Loome kalduvus-soojuskaardi '{output_filename}'.")
 
     elif log_scale:
         # Log-skaalal on numbreid annotatsioonidena keeruline kuvada, seega jätame need ära
-        heatmap_args = {"norm": LogNorm(), "annot": False, "cmap": "viridis"}
+        heatmap_args = {"norm": LogNorm(), "annot": False, "cmap": "Greys"}
         print(f"Loome soojuskaardi '{output_filename}' logaritmilise värviskaalaga.")
     else:
         # Vaikimisi lineaarne skaala täisarvuliste annotatsioonidega
-        heatmap_args = {"annot": True, "fmt": "d", "cmap": "viridis"}
+        heatmap_args = {"annot": True, "fmt": "d", "cmap": "Greys"}
         print(f"Loome soojuskaardi '{output_filename}' lineaarse värviskaalaga.")
 
-    sns.heatmap(crosstab_data, linewidths=.5, **heatmap_args)
+    # Lisame maski, et peita statistiliselt ebaolulised väärtused (kui mask on antud).
+    # `mask=significance_mask` peidab lahtrid, kus maski väärtus on True.
+    # See jätab lahtri tühjaks, selle asemel et kuvada 0.00, mis võiks olla eksitav.
+    sns.heatmap(crosstab_data, linewidths=.5, mask=significance_mask, **heatmap_args)
     
     plt.title(title, fontsize=20)
     plt.xlabel('Saaja piirkond', fontsize=14)
@@ -178,11 +182,11 @@ def run_analysis(data, region_key, title_prefix, file_suffix):
         print(crosstab_result)
         
     if region_key == 'region_group':
-        create_heatmap(crosstab_result, f'Gratulatsioonide sagedus ({title_prefix})', 
-                       f'gratulatsioonide_heatmap_{file_suffix}_linear.png')
+        create_heatmap(crosstab_result, f'Gratulatsioonide sagedus ({title_prefix})',
+                       f'gratulatsioonide_heatmap_{file_suffix}_linear.svg')
         
-        create_heatmap(crosstab_result, f'Gratulatsioonide sagedus ({title_prefix}, Log-skaala)', 
-                       f'gratulatsioonide_heatmap_{file_suffix}_log.png', log_scale=True)
+        create_heatmap(crosstab_result, f'Gratulatsioonide sagedus ({title_prefix}, Log-skaala)',
+                       f'gratulatsioonide_heatmap_{file_suffix}_log.svg', log_scale=True)
         
         propensity_matrix = calculate_propensity_matrix(crosstab_result, data, region_key)
         print(f"\n--- Kalduvuse (eelistuse) maatriks (Tegelik/Oodatav) ---")
@@ -197,8 +201,8 @@ def run_analysis(data, region_key, title_prefix, file_suffix):
         
         # Anname maski edasi heatmap funktsioonile
         create_heatmap(propensity_matrix, f'Gratulatsioonide kalduvus ({title_prefix})\n(Filtriga: vähemalt {MIN_GRATULATIONS} gratulatsiooni)', 
-                       f'gratulatsioonide_heatmap_{file_suffix}_propensity_filtered.png', 
-                       is_propensity=True, 
+                       f'gratulatsioonide_heatmap_{file_suffix}_propensity_filtered.svg',
+                       is_propensity=True,
                        significance_mask=significance_mask)
 
 def main():
@@ -212,7 +216,9 @@ def main():
     )
     print(f"\n{'='*25} ANALÜÜS LÕPETATUD {'='*25}")
     print("Vaata faile:")
-    print("- gratulatsioonide_heatmap_region_group_propensity_filtered.png (UUS: näitab ainult statistiliselt olulisemaid eelistusi)")
+    print("- gratulatsioonide_heatmap_region_group_linear.svg")
+    print("- gratulatsioonide_heatmap_region_group_log.svg")
+    print("- gratulatsioonide_heatmap_region_group_propensity_filtered.svg (UUS: näitab ainult statistiliselt olulisemaid eelistusi)")
 
 if __name__ == "__main__":
     main()
